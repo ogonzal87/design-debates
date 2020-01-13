@@ -31,8 +31,6 @@ class PatternOne extends React.Component {
             context: this,
             state: "cons"
         })
-        console.log(this.props.img)
-
     }
 
     // componentWillUnmount() {
@@ -92,7 +90,9 @@ class PatternOne extends React.Component {
         return (
             <div className="pattern-container">
                 <h1>Pattern One</h1>
-                <img className="pattern-img" src={this.props.img} alt="" />
+                {
+                    this.props.img ? <img className="pattern-img" src={this.props.img} alt="" /> : <div class="spinner red"></div>
+                }
                 <form onSubmit={this.addVote}>
                     {/*<textarea
                         ref={this.descriptionRef}

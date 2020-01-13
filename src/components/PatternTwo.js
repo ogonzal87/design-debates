@@ -90,7 +90,9 @@ class PatternTwo extends React.Component {
         return (
             <div className="pattern-container">
                 <h1>Pattern Two</h1>
-                <img className="pattern-img" src={this.props.img} alt="" />
+                {
+                    this.props.img ? <img className="pattern-img" src={this.props.img} alt="" /> : <div class="spinner blue"></div>
+                }
                 <form onSubmit={this.addVote}>
                     {/* <textarea
                         ref={this.descriptionRef}

@@ -10,12 +10,11 @@ class App extends React.Component {
         patternTwoImg: ''
     }
 
-    componentDidMount() {
+    getPictures() {
         const { match } = this.props;
         const storage = firebaseApp.storage();
         const storageRef = storage.ref();
         const urlsArr = [];
-
 
         const patternImgsRef = storageRef.child(`${match.params.id}`);
 
@@ -36,7 +35,15 @@ class App extends React.Component {
                 patternOneImg: urlsArr[0],
                 patternTwoImg: urlsArr[1]
             })
-        }, 2000);
+        }, 1500);
+    }
+
+    componentDidMount() {
+        this.getPictures();
+    }
+
+    componentDidUpdate() {
+        this.getPictures();
     }
 
     render() {

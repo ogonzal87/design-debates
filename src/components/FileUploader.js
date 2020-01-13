@@ -21,7 +21,6 @@ class FileUploader extends React.Component {
         const pathName = match.params.id;
 
         // Get file
-        console.log(this.patternOneUploadRef)
         let file1 = this.patternOneUploadRef.current.files[0];
         let file2 = this.patternTwoUploadRef.current.files[0];
         // Create storage ref
