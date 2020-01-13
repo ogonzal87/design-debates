@@ -26,7 +26,7 @@ class DebatePicker extends React.Component {
               <h2 className="debate-picker__subheading">Go Vote</h2>
               <h1 className="debate-picker__heading">DESIGN PATTERN DEBATES</h1>
             </div>
-            <p className="debate-picker__description">Take a democratic approach when you can't decide which design solution is best.</p>
+            <p className="debate-picker__description">A democratic approach for when you can't decide which design solution is best.</p>
             <img className="debate-picker__stars-svg" src={starsSVG} alt="" />
 
             <form className="debate-selector__form" onSubmit={this.goToFileUploader}>

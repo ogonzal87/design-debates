@@ -2,6 +2,8 @@
   "name": "design-debates",
   "version": "0.1.0",
   "private": true,
+  "email": "oskr@oskrhq.com",
+  "url": "https://design-debates.netlify.com/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",

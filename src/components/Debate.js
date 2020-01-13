@@ -2,7 +2,6 @@ import React from "react";
 import PatternOne from "./PatternOne";
 import PatternTwo from "./PatternTwo";
 import { firebaseApp } from "../base";
-import stars from "../css/images/stars-blue.svg";
 
 class App extends React.Component {
     state = {
@@ -49,7 +48,6 @@ class App extends React.Component {
     render() {
         return (
             <div className="patterns">
-                {/*<img className="stars" src={stars} alt="" />*/}
                 <PatternOne match={this.props.match} img={this.state.patternOneImg} />
                 <PatternTwo match={this.props.match} img={this.state.patternTwoImg} />
             </div>
