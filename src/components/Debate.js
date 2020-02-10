@@ -18,14 +18,14 @@ class App extends React.Component {
         const patternImgsRef = storageRef.child(`${match.params.id}`);
 
         patternImgsRef.listAll().then((result) => {
-            result.items.forEach((imageRef) => {
-                imageRef.getDownloadURL().then((url) => {
+            result.items.map((imageRef) => {
+                return imageRef.getDownloadURL().then((url) => {
                     urlsArr.push(url);
                 }).catch((error) => {
                     alert(error);
                 });
             });
-        }).catch(function (error) {
+        }).catch((error) => {
             alert(error);
         });
 
@@ -38,10 +38,6 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        this.getPictures();
-    }
-
-    componentDidUpdate() {
         this.getPictures();
     }
 
